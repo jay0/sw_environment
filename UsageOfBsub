@@ -1,0 +1,57 @@
+Usage:	bsub  [-h][-v]
+	bsub  [-f sub_script] // eg: /usr/sw-mpp/bin/jobscript
+	bsub	[-I]
+		[-p][-pr]	//list job's nodename and spe_map
+		[-q queue_name]
+		[-n num_mpes [-master | -allmaster | -allmaster0] | -N num_nodes]
+		[-np node_mpes]
+		[-nodempemap node_mpe_map](0x1-0xf)
+		[-mpecg mpe_cgs]
+		[-cgsp spe_in_cg | -min_cgsp min_spe_in_cg | -rtp spe_rtp | -asy]
+		[-mpmd]
+		[-nobind]
+		[-noredun]
+		[-node nodelist]
+		[-linpack_node node_file]
+		[-exclu | -shared]
+		[-js job_proj]
+		[-fs_proj fs_proj]
+		[-lfs_proj lfs_proj]
+		[-fsvol vol_name]
+		[-app appname]
+		[-appplugin appplugin]
+		[-J jobname]
+		[-jobtype job_type] // available type: COMM / IO / COMP / MEM / MIX
+		[-i infile]
+		[-o outfile]
+		[-k ckpt-period-minutes]
+		[-K] // kill-on-bad-exit, only for x86 tasks started by slurm
+		[-cross]
+		[-switchnode	nodenum_in_switch]
+		[-midnode	nodenum_in_mid]
+		[-cabnode	nodenum_in_cab]
+		[-health	health_level]
+		[-a	ccc [-gs groupsize] |
+			mpi |
+			omp [-pt threads_in_process]]
+		[-perf | -preff perf_file]
+		[-sw3runarg "arg1 arg2 ..."]	//this parameter will take to sw3run
+		[-b]			//for sw3run as -b 1
+		[-parse]		//for sw3run as -p
+		[-PARSE <all | master | slave>]		//for sw3run as -P
+		[-quick]		//for sw3run as -q or --quick
+		[-m 		value]	//for sw3run as -m value
+		[-share_size0	size]	//for sw3run as -s size only on rank0
+		[-priv_size0	size]	//for sw3run as -t size only on rank0
+		[-cross_size0	size]	//for sw3run as -T size only on rank0
+		[-ro_size0	size]	//for sw3run as -r size only on rank0
+		[-pe_stack0	size]	//for sw3run as -S size only on rank0
+		[-host_stack0	size] 	//for sw3run as -K size only on rank0
+		[-share_size	size]	//for sw3run as -s size
+		[-priv_size	size]	//for sw3run as -t size
+		[-cross_size	size]	//for sw3run as -T size
+		[-ro_size	size]	//for sw3run as -r size
+		[-pe_stack	size]	//for sw3run as -S size
+		[-host_stack	size] 		//for sw3run as -K size
+		[-sw3run	sw3run_name]	//just for Guhongfeng debug, use own sw3run
+		[command	[argument...]]
