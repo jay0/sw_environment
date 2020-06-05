@@ -6,3 +6,6 @@ The executable file of Jdebug
 
 UsageOfBsub：
 The usage of the job submission command "bsub" on Sunway TaihuLight
+
+UsageOfJdebug:
+The usage of Jdebug on Sunway TaihuLight
